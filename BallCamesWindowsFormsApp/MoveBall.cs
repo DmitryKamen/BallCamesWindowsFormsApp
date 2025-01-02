@@ -10,7 +10,7 @@ namespace BallCamesWindowsFormsApp
     public class MoveBall : RandomPointBall
     {
         private Timer timer;
-        public MoveBall(Form1 form) : base(form)
+        public MoveBall(Form form) : base(form)
         {
             timer = new Timer();
             timer.Interval = 20;
@@ -30,6 +30,11 @@ namespace BallCamesWindowsFormsApp
         public void Stop()
         {
             timer.Stop();
+        }
+
+        public bool IsMovable()
+        {
+            return timer.Enabled;
         }
     }
 }

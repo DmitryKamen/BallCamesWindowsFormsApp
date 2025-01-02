@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace BallCamesWindowsFormsApp
+namespace Ball.Common
 {
     public class PointBall : Ball
     {

@@ -80,9 +80,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BallCamesWindowsFormsApp\BallCamesWindowsFormsApp.csproj">
-      <Project>{863fad8b-9d2d-48d4-a06b-80a576e582af}</Project>
-      <Name>BallCamesWindowsFormsApp</Name>
+    <ProjectReference Include="..\Ball.Common\Ball.Common.csproj">
+      <Project>{54008cea-d043-4272-8d02-ad0190842625}</Project>
+      <Name>Ball.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

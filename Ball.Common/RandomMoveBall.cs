@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Ball.Common
+namespace Balls.Common
 {
     public class RandomMoveBall : MoveBall
     {

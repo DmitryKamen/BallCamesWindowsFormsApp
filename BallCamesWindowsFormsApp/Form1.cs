@@ -1,4 +1,4 @@
-﻿using Ball.Common;
+﻿using Balls.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +14,7 @@ namespace BallCamesWindowsFormsApp
     public partial class Form1 : Form
     {
         PointBall pointBall;
-        List<RandomMoveBall> randomMoveBalls;
+        List<Ball> balls;
         
         public Form1()
         {
@@ -32,8 +32,8 @@ namespace BallCamesWindowsFormsApp
             var countBalls = 0;
             for (int i = 0; i < 10; i++)
             {
-                randomMoveBalls[i].Stop();
-                if (randomMoveBalls[i].OnForm()) countBalls++;
+                balls[i].Stop();
+                if (balls[i].OnForm()) countBalls++;
             }
             MessageBox.Show(countBalls.ToString());
             stopButton.Enabled = false;
@@ -43,11 +43,11 @@ namespace BallCamesWindowsFormsApp
         {
             stopButton.Enabled = true;
             startButton.Enabled = false;
-            randomMoveBalls = new List<RandomMoveBall>();
+            balls = new List<Ball>();
             for (int i = 0; i < 10; i++)
             {
                 var moveBall = new RandomMoveBall(this);
-                randomMoveBalls.Add(moveBall);
+                balls.Add(moveBall);
                 moveBall.Start();
             }
         }
@@ -60,7 +60,7 @@ namespace BallCamesWindowsFormsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (var moveBall in randomMoveBalls)
+            foreach (var moveBall in balls)
             {
                 moveBall.Clear();
             }

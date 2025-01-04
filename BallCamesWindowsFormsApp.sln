@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BallCamesWindowsFormsApp", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatchMe2WindowsFormsApp", "CatchMe2WindowsFormsApp\CatchMe2WindowsFormsApp.csproj", "{DFB1E461-48AC-43AD-98AF-F38D4DD10A02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ball.Common", "Ball.Common\Ball.Common.csproj", "{54008CEA-D043-4272-8D02-AD0190842625}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balls.Common", "Ball.Common\Balls.Common.csproj", "{54008CEA-D043-4272-8D02-AD0190842625}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

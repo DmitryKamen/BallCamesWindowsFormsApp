@@ -1,13 +1,13 @@
 ﻿using System.Windows.Forms;
 
-namespace Ball.Common
+namespace Balls.Common
 {
     public class PointBall : Ball
     {
         public PointBall(Form form, int x, int y) : base(form) 
         {
-            this.x = x;
-            this.y = y;
+            centerX = x;
+            centerY = y;
         }
     }
 }

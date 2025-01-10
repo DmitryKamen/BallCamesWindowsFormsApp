@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Balls.Common
@@ -10,6 +7,12 @@ namespace Balls.Common
     public class MoveBall : RandomPointBall
     {
         public MoveBall(Form form) : base(form)
+        {
+            vx = GenerateRandomProjection();
+            vy = GenerateRandomProjection();
+        }
+
+        public MoveBall(Form form, Brush brush) : base(form, brush)
         {
             vx = GenerateRandomProjection();
             vy = GenerateRandomProjection();

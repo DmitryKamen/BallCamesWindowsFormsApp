@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Balls.Common
 {
     public class Ball
     {
-        private Form form;
-        private Timer timer;
+        protected Form form;
+        protected Brush brush = Brushes.Blue;
+        protected Timer timer;
 
-        protected int vx = 1;
-        protected int vy = 1;
+        protected float vx = 1;
+        protected float vy = 1;
 
         protected int centerX = 10;
         protected int centerY = 10;
@@ -28,6 +25,19 @@ namespace Balls.Common
             timer.Tick += Timer_Tick;
         }
 
+        public Ball(Form form, Brush brush)
+        {
+            this.form = form;
+            this.brush = brush;
+            timer = new Timer();
+            timer.Interval = 20;
+            timer.Tick += Timer_Tick;
+        }
+
+        public Brush GetBrush() 
+        { 
+            return brush; 
+        }
         private void Timer_Tick(object sender, EventArgs e)
         {
             Move();
@@ -49,7 +59,6 @@ namespace Balls.Common
 
         public void Show() 
         {  
-            var brush = Brushes.Aqua;
             Drow(brush);
         }
         public void Move()
@@ -67,8 +76,8 @@ namespace Balls.Common
 
         protected virtual void Go()
         {
-            centerX += vx;
-            centerY += vy;
+            centerX += (int)vx;
+            centerY += (int)vy;
         }
 
         public void Clear()
